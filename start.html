@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>start</title>
+</head>
+<body class="start">
+    <input type="button" value="start" id="start-btn" class="start-btn"
+    onClick="self.location='game.html'">
+    <div class="volume-box">
+        <div class="bg-music">
+            <audio src="images/The Imperial March (1 Hour) (1).mp3" loop="" id="myMusic"></audio>
+            <input type="image" src="images/volume on.png" id="volume-on" class="img" >
+            <input type="image" src="images/volume off (1).png" id="volume-off" class="img">
+        </div>
+        <p class="volume-text">Volume</p>
+        <input id="vol-control" type="range" step=0.01 min="0" max="100" step="1" class="volume" onchange="setVolume()"></input>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>

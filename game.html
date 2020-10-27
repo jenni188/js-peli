@@ -4,9 +4,90 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>game</title>
 </head>
-<body>
+<body id="game">
+    <h1 id="game-h1">Star Wars platform game!</h1>
+    
+    <dialog id="shop-modal">
+        <div class="modal-content">
+            
+            <h2 id="gameH2">Buy characters</h2>
+            <div id="shop-container">
+                <div id="image-container">
+                    <div id="item1" class="item">
+                        <img src="images/kylo.png" id="kylo" class="img">
+                        <input type="button" class="buy" value="buy">
+                    </div>
+                    <div id="item2" class="item">
+                        <img src="images/boba.png" id="boba" class="img">
+                        <input type="button" class="buy" value="buy">
+                    </div>
+                    <div id="item3" class="item">
+                        <img src="images/r2-d2.png" id="r2-d2" class="img">
+                        <input type="button" class="buy" value="buy">
+                    </div>
+                    <div id="item4" class="item">
+                        <img src="images/star.png" id="star" class="img">
+                        <input type="button" class="buy" value="buy">
+                    </div>
+                    <div id="item5" class="item">
+                        <img src="images/yoda.png" id="yoda" class="img">
+                        <input type="button" class="buy" value="buy">
+                    </div>
+                </div>
+            </div>
+            <button id="module-close"onclick="hideModal()">Close</button>
+        </div>
+        
+    </dialog>
+
+    <div>
+        <button id="exit-btn" onClick="self.location='start.html'">Exit</button>
+        <button onclick="openModal()" id="shop-btn">Buy characters</button>
+    </div>
+    <div class="grid-container">
+       <div>
+           <input type="button" value="1" class="level" id="level1"
+           onClick="self.location='level1.html'">
+       </div>
+       <div>
+        <input type="button" value="2" class="level" id="level2"
+        onClick="self.location='level2.html'">
+    </div>
+    <div>
+        <input type="button" value="3" class="level" id="level3"
+        onClick="self.location='level3.html'">
+    </div>
+    <div>
+        <input type="button" value="4" class="level" id="level4"
+        onClick="self.location='level4.html'">
+    </div>
+    <div>
+        <input type="button" value="5" class="level" id="level5"
+        onClick="self.location='level5.html'">
+    </div>
+    <div>
+        <input type="button" value="6" class="level" id="level6"
+        onClick="self.location='level6.html'">
+    </div>
+    <div>
+        <input type="button" value="7" class="level" id="level7"
+        onClick="self.location='level7.html'">
+    </div>
+    <div>
+        <input type="button" value="8" class="level" id="level8"
+        onClick="self.location='level8.html'">
+    </div>
+    <div>
+        <input type="button" value="9" class="level" id="level9"
+        onClick="self.location='level9.html'">
+    </div>
+    <div>
+        <input type="button" value="10" class="level" id="level10"
+        onClick="self.location='level1.html0'">
+    </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

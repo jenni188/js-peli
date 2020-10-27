@@ -1,9 +1,15 @@
-.start{
+#start{
     background-image: url("images/back2.jpg");
    
 }
 
+#game{
+    background-image: url(images/back.jpg);
+}
 
+.levels{
+    background-color: black;
+}
 
 .volume{
     position: absolute;
@@ -48,24 +54,254 @@
     margin: 0% auto;
 }
 
-.img{
-    width: 90px;
-    height: 73px;
+.volume-btn{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
     background-color: transparent;
     color: #fff;
     font-size: 78px;
     border: none;
     display: block;
-    margin: 0% auto;
     opacity: .7;
     transition: all linear .2s ;
 }
 
-.img:hover{
+.volume-btn:hover{
     opacity: 1;
 
 }
 
-.volume-off{
+.volume-btn img{
+    height: 90px;
+    width: 140px;
+}
+
+#volume-off{
     display: none;
+}
+
+#game-h1{
+    text-align: center;
+    font-size: 60px;
+    color: #99ccff;
+}
+
+#exit-btn{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 150px;
+    top: 85%;
+    font-size: 50px;
+    width: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: black;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+#exit-btn:hover{
+background-color: #99ccff;
+    color: rgb(0, 0, 0);
+}
+
+#shop-btn{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 150px;
+    top: 75%;
+    font-size: 25px;
+    width: 175px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #99ccff;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+#shop-btn:hover{
+    background-color: #000000;
+    color: rgb(255, 254, 254);
+    }
+
+    #module-close{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 55%;
+        font-size: 25px;
+        width: 175px;
+        padding: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(0, 0, 0);
+        background-color: #99ccff;
+        transition-duration: 0.4s;
+        border-radius: 10px;
+    }
+
+    #module-close:hover{
+        background-color: #000000;
+        color: rgb(255, 254, 254);
+        }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    height: 600px;
+    margin-left: 350px;
+    margin-right: 20px;
+    margin-top: 100px;
+}
+
+.level{
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    transition-duration: 0.4s;
+    font-size: 100px;
+    display: block;
+    width: 250px;
+    height: 250px;    
+    border-radius: 10px;
+    opacity: 1;
+    margin: 20px;
+}
+
+.level:hover{
+    background-color: #99ccff;
+    color: rgb(0, 0, 0);
+    opacity: .7;
+}
+
+
+.level-c{
+    border: #99ccff 3px solid;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 53%;
+}
+
+.levelH1{
+    text-align: left;
+    font-size: 50px;
+    margin-left: 200px ;
+    color: #99ccff;
+}
+
+.levelH2{
+    color: #99ccff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 25%;
+    top: 50px;
+    font-size: 30px;
+    border: #99ccff 2px solid;
+    padding: 5px 50px 3px 3px;
+}
+
+.level-exit-btn{
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    transition-duration: 0.4s;
+    font-size: 40px;
+    display: block;
+    width: 175px;
+    height: 80px;    
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 110px;
+    top: 90%;
+}
+
+.level-exit-btn:hover{
+    background-color: #99ccff;
+    color: rgb(0, 0, 0);
+    
+}
+
+.hearts{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 35%;
+    top: 70px;
+    background-color: #99ccff;
+    border-radius: 10px ;
+    padding: 10px 5px 0px 5px;
+}
+
+.hearts img{
+    height: 40px;
+    width: 43px;
+}
+
+#shop-modal{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #99ccffa6;
+}
+
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid black;
+    height: 55%;
+    width: 60%;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: rgb(70, 70, 70);
+  }
+
+  #image-container{
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      grid-row-gap: 5px;
+      color: rgb(255, 254, 254);
+      height: 300px;
+      margin-top: 30px ;
+      background-color: rgb(255, 254, 254);
+  }
+
+.img{
+    max-height: 90%;
+    max-width: 90%;
+    display: block;
+    margin-top: 40px ;
+    
+}
+
+.buy{
+    position: absolute;
+    bottom: 510px;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    padding: 5px 10px 30px 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.buy:hover{
+    background-color: #99ccff;
+    color: rgb(0, 0, 0);
+}
+
+
+.item{
+    border: rgb(255, 254, 254) solid 2px;
 }

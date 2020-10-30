@@ -182,6 +182,7 @@ background-color: #99ccff;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 53%;
+    background-image: url("images/12.jpg");
 }
 
 .levelH1{
@@ -189,6 +190,7 @@ background-color: #99ccff;
     font-size: 50px;
     margin-left: 200px ;
     color: #99ccff;
+    
 }
 
 .levelH2{
@@ -261,17 +263,16 @@ background-color: #99ccff;
     text-align: center;
     font-size: 25px;
     border-radius: 10px;
-    background-color: rgb(70, 70, 70);
+    
   }
 
   #image-container{
       display: grid;
       grid-template-columns: auto auto auto auto auto;
-      grid-row-gap: 5px;
+      grid-row-gap: 30px;
       color: rgb(255, 254, 254);
       height: 300px;
       margin-top: 30px ;
-      background-color: rgb(255, 254, 254);
   }
 
 .img{
@@ -303,5 +304,57 @@ background-color: #99ccff;
 
 
 .item{
-    border: rgb(255, 254, 254) solid 2px;
+    border: rgb(0, 0, 0) solid 3px;
+    background-color: #5b93caa4;
 }
+
+
+#kylo{
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+#boba{
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#r2-d2{
+    padding-top: 55px ;
+    padding-left: 30px;
+}
+
+#star{
+    padding-top: 30px;
+    padding-left: 60px;
+}
+
+#yoda{
+    padding-top: 70px;
+    padding-left: 40px;
+}
+
+
+#block-1{
+ width: 80px;
+ height: 50px;
+ display: none;
+}
+
+#block-3{
+    height: 50px;
+    width: 270px;
+    display: none;
+}
+
+#block-4{
+    height: 50px;
+    width: 300px;
+    display: none;
+}
+
+#boba{
+    height: 60px;
+    width: 50px;
+    display: none;
+  }

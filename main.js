@@ -14,10 +14,11 @@ function hideModal(){
 
 const canvas = document.getElementById("level-c");
 const ctx = canvas.getContext("2d");
-
+const gravity = 7.5;
 
 const block1 = document.getElementById("block-1");
-const image = document.getElementById("boba")
+const block2 = document.getElementById("block-3-pysty");
+const image = document.getElementById("boba");
 
 const pf1 = {
     w: 80,
@@ -31,7 +32,7 @@ const pf1 = {
 const pf2 = {
     w: 80,
     h: 50,
-    x: 50,
+    x: 49,
     y: 500,
     dx: 0,
     dy: 0,
@@ -40,7 +41,7 @@ const pf2 = {
 const pf3 = {
     w: 80,
     h: 50,
-    x: 100,
+    x: 98,
     y: 500,
     dx: 0,
     dy: 0,
@@ -49,7 +50,7 @@ const pf3 = {
 const pf4 = {
     w: 80,
     h: 50,
-    x: 150,
+    x: 147,
     y: 500,
     dx: 0,
     dy: 0,
@@ -58,7 +59,7 @@ const pf4 = {
 const pf5 = {
     w: 80,
     h: 50,
-    x: 200,
+    x: 196,
     y: 450,
     dx: 0,
     dy: 0,
@@ -67,21 +68,42 @@ const pf5 = {
 const pf6 = {
     w: 80,
     h: 50,
-    x: 250,
+    x: 245,
     y: 400,
     dx: 0,
     dy: 0,
 }
 
-const player = {
-    w: 50,
-    h: 70,
-    x: 20,
-    y: 200,
-    speed: 5,
+const pf7 = {
+    w: 80,
+    h: 50,
+    x: 294,
+    y: 350,
     dx: 0,
     dy: 0,
 }
+
+const pf8 = {
+    w: 50,
+    h: 250,
+    x: 355,
+    y: 316,
+    dx: 0,
+    dy: 0,
+}
+
+const player = {
+    w: 60,
+    h: 70,
+    x: 20,
+    y: 420,
+    speed: 5,
+    dx: 0,
+    dy: 0,
+    jump : true,
+}
+
+
 
 function drawPlayer() {
     ctx.drawImage(image, player.x, player.y, player.w, player.h);
@@ -94,6 +116,8 @@ function drawPlatform(){
     ctx.drawImage(block1, pf4.x, pf4.y, pf4.w, pf4.h);
     ctx.drawImage(block1, pf5.x, pf5.y, pf5.w, pf5.h);
     ctx.drawImage(block1, pf6.x, pf6.y, pf6.w, pf6.h);
+    ctx.drawImage(block1, pf7.x, pf7.y, pf7.w, pf7.h);
+    ctx.drawImage(block2, pf8.x, pf8.y, pf8.w, pf8.h);
 }
 
 function clear(){
@@ -118,14 +142,69 @@ function newPos(){
 
     pf6.x += pf6 .dx;
     pf6.y += pf6.dy;
+
+    pf7.x += pf7 .dx;
+    pf7.y += pf7.dy;
+
+    pf8.x += pf8 .dx;
+    pf8.y += pf8.dy;
 }
+
 
 function newPos1(){
     player.x += player.dx;
     player.y += player.dy;
 
+    detecWalls();
 }
 
+function detecWalls(){
+    if (player.x < 0){
+    player.x = 0;
+    }
+    if (player.x + player.w > canvas.width){
+    player.x = canvas.width - player.w;
+    }
+    if (player.y < 0){
+    player.y = 0;
+    }
+    if (player.y + player.h > canvas.height){
+    player.y = canvas.height - player.h;
+    }
+}
+
+
+function moveRight(){
+    player.dx = player.speed;
+}
+
+function moveLeft(){
+    player.dx = -player.speed;
+}
+
+function keyDown(e){
+    if(e.key === "ArrowRight" || e.key === "Right"){
+        moveRight();
+    } else if (e.key === "ArrowLeft" || e.key === "Left"){
+        moveLeft();
+    } 
+    
+}
+
+function keyUp(e){
+    if (
+        e.key == "Right" ||
+        e.key == "ArrowRight" ||
+        e.key == "Left" ||
+        e.key == "ArrowLeft" 
+     ) {
+        player.dx = 0;
+        player.dy = 0;
+    }
+}
+
+
+if
 
 
 function update(){ 
@@ -134,13 +213,16 @@ function update(){
     drawPlayer(); 
     newPos();
     newPos1();
+    requestAnimationFrame(update);
+    player.y += gravity;
    
 }
 
 
 update();
 
-
+document.addEventListener("keydown", keyDown)
+document.addEventListener("keyup", keyUp)
 
 
 
